@@ -786,12 +786,12 @@ impl Bucket {
     ///
     /// # fn example() -> Result<(), S3Error> {
     /// let bucket = Bucket::new("my-bucket", Region::from_str("us-east-1")?, Credentials::default()?)?
-    ///     .set_dangereous_config(true, true)?;
+    ///     .set_dangerous_config(true, true)?;
     /// # Ok(())
     /// # }
     ///
     #[cfg(any(feature = "tokio-native-tls", feature = "tokio-rustls-tls"))]
-    pub fn set_dangereous_config(
+    pub fn set_dangerous_config(
         &self,
         accept_invalid_certs: bool,
         accept_invalid_hostnames: bool,
